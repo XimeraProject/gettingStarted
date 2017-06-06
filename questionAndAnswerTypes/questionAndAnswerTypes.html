@@ -1,0 +1,184 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Question and answer types</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- charset=utf-8,-css,html,xhtml --> 
+<meta name="src" content="questionAndAnswerTypes.tex" /> 
+<meta name="date" content="2017-06-06 01:47:00" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\Sectionformat }[2]{#1}                             </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+<!--l. 5--><p class="noindent" >This section explores the different types of exercises Ximera supports.
+</p></div>   <div class="maketitle"></div>
+Ximera supports many exercise types.
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Basic Function Answer Type</h3>
+<!--l. 14--><p class="noindent" >The basic way of including a answerable item in Xiemra is to use the <span class="obeylines-h"><span class="verb">\answer</span></span>
+command. The <span class="obeylines-h"><span class="verb">\answer</span></span> <strong>must</strong> be inside of an environment.
+</p><!--l. 18--><p class="noindent" ><pre>
+\begin{question}
+ <br />$3\times 2 = \answer{6}$
+ <br />\end{question}
+</p><!--l. 22--><p class="noindent" ></pre>
+</p><!--l. 24--><p class="noindent" >Will produce the question:
+</p>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-1001r1"></a> <script type="math/tex"> <![CDATA[ 
+3\times 2 = \answer {6} 
+]]> 
+</script>
+</div>
+<!--l. 30--><p class="noindent" >In addition to numerical answers, we also support elementary functions:
+</p><!--l. 32--><p class="noindent" ><pre>
+    \begin{question}
+ <br />         $ \frac{\partial}{\partial x} x^2\sin(y) =  \answer{2x\sin(y)}$
+ <br />    \end{question}
+</p><!--l. 36--><p class="noindent" ></pre>
+</p><!--l. 38--><p class="noindent" >Produces:
+</p>
+<div class="problem-environment question" id="problem2"><a 
+ id="x1-1002r2"></a> <script type="math/tex"> <![CDATA[ 
+ \frac {\partial }{\partial x} x^2\sin (y) = \answer {2x\sin (y)} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</div>
+<div class="theorem-like problem-environment remark" id="problem3"><a 
+ id="x1-1003r3"></a>Under the hood, Ximera is parsing the user input, producing a function, and
+checking the user input function against ‘‘answer&#x2019;&#x2019; at <script type="math/tex"> <![CDATA[ 
+100 
+]]> 
+</script> different complex
+numbers, and seeing if the results are ‘‘reasonably&#x2019;&#x2019; close to each other. We
+compare the complex extensions of these functions to circumvent domain
+issues.
+</div>
+<!--l. 53--><p class="noindent" >While <strong>any</strong> environment can contain the command <span class="obeylines-h"><span class="verb">\answer</span></span>, there are four special
+environments: <span class="obeylines-h"><span class="verb">question</span></span>, <span class="obeylines-h"><span class="verb">exercise</span></span>, <span class="obeylines-h"><span class="verb">problem</span></span>, <span class="obeylines-h"><span class="verb">exploration</span></span>. Each of these
+environments is the same, except for the name. These environment interact with the
+optional arguments in the documentclass in useful ways. We&#x2019;ll discuss this
+later.
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Choice Answer Type</h3>
+<h4 class="subsectionHead"><a 
+ id="x1-3000"></a>Multiple Choice</h4>
+<!--l. 68--><p class="noindent" ><pre>
+\begin{question}
+ <br />Which of the following functions has a graph which is a parabola?
+ <br />\begin{multipleChoice}
+ <br />\choice[correct]{$y=x^2+3x-3$}
+ <br />\choice{$y = \frac{1}{x+2}$}
+ <br />\choice{$y=3x+1$}
+ <br />\end{multipleChoice}
+ <br />\end{question}
+</p><!--l. 77--><p class="noindent" ></pre>
+</p><!--l. 79--><p class="noindent" >Produces:
+</p>
+<div class="problem-environment question" id="problem4"><a 
+ id="x1-3001r4"></a> Which of the following functions has a graph which is a parabola? <div class="multiple-choice" id="problem5"><span class="choice correct "   id="choice1"><script type="math/tex"> <![CDATA[ 
+y=x^2+3x-3 
+]]> 
+</script></span> <span class="choice  "   id="choice2"><script type="math/tex"> <![CDATA[ 
+y = \frac {1}{x+2} 
+]]> 
+</script></span> <span class="choice  "   id="choice3"><script type="math/tex"> <![CDATA[ 
+y=3x+1 
+]]> 
+</script></span> </div>
+</div>
+<div class="theorem-like problem-environment remark" id="problem6"><a 
+ id="x1-3002r5"></a>Multiple choice answers appear in the order you type them.
+</div>
+<h4 class="subsectionHead"><a 
+ id="x1-4000"></a>Select All</h4>
+<!--l. 97--><p class="noindent" ><pre>
+                                                                  
+
+                                                                  
+\begin{question}
+ <br />  Which of the following numbers are even?
+ <br />  \begin{selectAll}
+ <br />    \choice[correct]{$2$}
+ <br />    \choice{$1$}
+ <br />    \choice[correct]{$-4$}
+ <br />    \choice[correct]{$0$}
+ <br />  \end{selectAll}
+ <br />\end{question}
+</p><!--l. 107--><p class="noindent" ></pre>
+</p><!--l. 109--><p class="noindent" >Produces:
+</p>
+<div class="problem-environment question" id="problem7"><a 
+ id="x1-4001r6"></a> Which of the following numbers are even? <div class="select-all" id="problem8"><a 
+ id="x1-4002r7"></a> <span class="choice correct "   id="choice4"><script type="math/tex"> <![CDATA[ 
+2 
+]]> 
+</script></span> <span class="choice  "   id="choice5"><script type="math/tex"> <![CDATA[ 
+1 
+]]> 
+</script></span> <span class="choice correct "   id="choice6"><script type="math/tex"> <![CDATA[ 
+-4 
+]]> 
+</script></span> <span class="choice correct "   id="choice7"><script type="math/tex"> <![CDATA[ 
+0 
+]]> 
+</script></span>
+</div>
+</div>
+<div class="theorem-like problem-environment remark" id="problem9"><a 
+ id="x1-4003r8"></a>Select All answers appear in the order you type them.
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-5000"></a>free-response</h3>
+<!--l. 152--><p class="noindent" >The free response environment gives students access to a <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> editor.
+</p><!--l. 154--><p class="noindent" ><pre>
+\begin{question}
+ <br />Question goes here!
+ <br />\begin{freeResponse}
+ <br />This is the model solution %You don&#x2019;t actually need anything in between the begin and end line.
+ <br />\end{freeResponse}
+ <br />\end{question}
+</p><!--l. 161--><p class="noindent" ></pre>
+</p>
+<div class="problem-environment question" id="problem10"><a 
+ id="x1-5001r9"></a> Question goes here! <div class="free-response" id="problem11"><a 
+ id="x1-5002r10"></a> This is the model solution
+</div>
+</div>
+<div class="theorem-like problem-environment remark" id="problem12"><a 
+ id="x1-5003r11"></a>Clicking on <span class="obeylines-h"><span class="verb">View model solution</span></span> shows the user whatever you typed in the
+<span class="obeylines-h"><span class="verb">freeResponse</span></span> environment.
+</div>
+                                                                  
+
+                                                                  
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

@@ -1,0 +1,93 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Troubleshooting</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- charset=utf-8,-css,html,xhtml --> 
+<meta name="src" content="troubleshooting.tex" /> 
+<meta name="date" content="2017-06-05 19:27:00" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\Sectionformat }[2]{#1}                             </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+<!--l. 5--><p class="noindent" >This activity contains some possible solutions to issues that might arise
+</p></div>   <div class="maketitle"></div>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem">Be careful when pasting the key into the webhook secret field. Be sure
+     that no extra spaces were copied. Push the <span class="obeylines-h"><span class="verb">Update webhook</span></span> button on
+     <a href="http://github.org">github.org</a> after correcting the secret.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem">To see updates on the course webpage after pushing changes
+     through <span class="obeylines-h"><span class="verb">git</span></span>, push the browser&#x2019;s refresh button and then click
+     the <span class="obeylines-h"><span class="verb">Update activity</span></span> button on the course page. Deleting your
+     browser&#x2019;s cache might also resolve certain issues.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd 
+class="enumerate-enumitem">Use <span class="obeylines-h"><span class="verb">\includegraphics{file.png}</span></span> rather than
+    <span class="obeylines-h"><span class="verb">\includegraphics{file}</span></span>. <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> will gracefully handle either
+     case whereas Ximera currently requires explicit file
+     extensions.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd 
+class="enumerate-enumitem">The optional scaling argument of <span class="obeylines-h"><span class="verb">\includegraphics</span></span> currently
+     does not work on the Ximera side.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd 
+class="enumerate-enumitem">The preamble of every activity file needs to include a
+    <span class="obeylines-h"><span class="verb">\title</span></span> command.
+     </dd><dt class="enumerate-enumitem">
+ (f) </dt><dd 
+class="enumerate-enumitem">The abstract and the <span class="obeylines-h"><span class="verb">\maketitle</span></span> command of every activity
+     file need to occur after <span class="obeylines-h"><span class="verb">\begin{document}</span></span>.
+     </dd><dt class="enumerate-enumitem">
+ (g) </dt><dd 
+class="enumerate-enumitem">A good way to check for <span class="TEX">T<span 
+class="E">E</span>X</span> typing mistakes is to run
+     <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> on all the <span class="TEX">T<span 
+class="E">E</span>X</span> files. Indeed, this is good practice
+     irrespective of mistakes and additionally produces handouts
+     that can be given to students.
+     </dd><dt class="enumerate-enumitem">
+ (h) </dt><dd 
+class="enumerate-enumitem">If your <span class="TEX">T<span 
+class="E">E</span>X</span> files compile correctly, you should confirm that
+                                                                  
+
+                                                                  
+     they have been successfully uploaded to <a href="http://github.org">github.org</a> and that
+     <a href="http://github.org">github.org</a> has successfully pushed those files in turn to
+     <a href="http://ximera.osu.edu">ximera.osu.edu</a>. To do this you can click on the most recent
+     delivery on the <span class="obeylines-h"><span class="verb">Webhooks &#x0026; Services</span></span> page in your repository
+     on <a href="http://github.org">github.org</a>. In case of any delivery errors, they will be
+     reported here. You can also push the <span class="obeylines-h"><span class="verb">Redeliver</span></span> button in
+     case of any errors.
+     </dd></dl>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+
