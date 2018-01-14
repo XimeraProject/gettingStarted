@@ -7,10 +7,30 @@ Instructions for installing Ximera locally
 \end{abstract}
 \maketitle
 
-% 
+
+
 \link[Ximera]{http://ximera.osu.edu} can also be run on your own machine rather than through CoCalc. Note that you will need to initialize your own git repos if you are not running through the CoCalc xandbox using \verb!git init!.
 
-\subsection{Terminal commands for installing xake on Ubuntu 16.04}
+\section{Install ximeraLaTeX}
+
+This can be done by going to \link[XimeraProject/ximeraLatex GitHub
+  page]{https://github.com/XimeraProject/ximeraLatex}, and scrolling
+down to the directions for your particular platform.
+
+
+
+
+\section}{Install xake}
+
+Xake is Ximera's version of ``make'' and it converts the
+\LaTeX\ source into HTML.
+
+\subsection{Installing xake on Arch}
+
+\verb!yaourt -S xake-git! should work assuming you use \texttt{yaourt}.
+
+  
+\subsection{Installing xake on Ubuntu}
 \begin{verbatim}
 sudo apt-get install golang-go
 \end{verbatim}
@@ -33,9 +53,9 @@ PATH=$PATH:~/go/bin
 \end{verbatim}
 Reboot!  Now you should be able to use the command xake
 
-\subsection{Terminal commands for installing xake on Mac}
-\begin{enumerate}
+\subsection{Installing xake on Mac}
 
+\begin{enumerate}
 \item First you need \link[HomeBrew]{https://brew.sh}. Follow the link and the instructions there.
 \item Then you need to install \link[Go]{http://www.golangbootcamp.com/book/get_setup}. Note: the first instruction is to install HomeBrew, which you have already done. 
 \item You might need to install ''pkg-config” and ''libgit2”. This can be done via HomeBrew:
@@ -69,8 +89,8 @@ You will need to enter your passkey; prompt may be broken but try typing it and 
 
 \item You may get vague error messages here if you have not successfully set up your git name and email; you can do this with:
 \begin{verbatim}
-git config --global user.name "NAME”
-git config --global user.email “EMAIL”
+git config --global user.name "YOUR-NAME"
+git config --global user.email "YOUR-EMAIL"
 \end{verbatim}
 \end{enumerate}
 \end{document}
