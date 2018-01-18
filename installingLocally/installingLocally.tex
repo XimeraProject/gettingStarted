@@ -75,12 +75,13 @@ brew install xake/xake
 \end{verbatim}
 
 \item If you don’t already have a GPG key, then do
-\verb!gpg --gen-key!, answer the questions, and copy the long hex string as YOUR-GPG-KEY-ID ( ABCD3562DBF9929292 or whatever)
+\begin{verbatim}
+gpg --gen-key
+\end{verbatim}
+answer the questions, but \textbf{leave the passphrase blank} and copy the long hex string as YOUR-GPG-KEY-ID ( ABCD3562DBF9929292 or whatever)
 \begin{verbatim}
 gpg --keyserver hkps://ximera.osu.edu/ --send-key YOUR-GPG-KEY-ID
-
 PATH=$PATH:~/go/bin
-
 xake -k YOUR-GPG-KEY-ID name yourxakename
 \end{verbatim}
 You will need to enter your passkey; prompt may be broken but try typing it and hitting enter anyway
