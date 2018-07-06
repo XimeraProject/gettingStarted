@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\title{Installing Locally}
+\title{Installing Locally: Windows}
 
 \begin{document}
 \begin{abstract}
@@ -11,14 +11,30 @@ First you will want to install ``Ubuntu'' for Windows. You download
 this from the Microsoft Store. While this process can be somewhat
 complex, however, following the prompts will get you there.
 
-Once  you get this, launch Ubuntu you will see a window like the following:
+At some point it will ask you for a username and password. Choose a
+username that is reasonable, and a password that you can type when
+needed (it doesn't need to be super secret).
+
+Once it is installed you will see something like:
+
+\begin{verbatim}
+your-user-name@your-computers-name:~$
+\end{verbatim}
+
+Now lets keep your computer up-to-date:
+
+\begin{verbatim}
+sudo apt update
+sudo apt upgrade
+\end{verbatim}
+
+Now we need to install some software:
+
+\begin{verbatim}
+sudo apt install texlive-full 
+\end{verbatim}
 
 
-Go ahead and press any key. If the window abruptly closes, restart
-Windows and try again
-
-
-\link[Ximera]{http://ximera.osu.edu} can also be run on your own machine rather than through CoCalc. Note that you will need to initialize your own git repos if you are not running through the CoCalc xandbox using \verb!git init!.
 
 \section{Install ximeraLaTeX}
 
@@ -27,11 +43,11 @@ This can be done by going to \link[XimeraProject/ximeraLatex GitHub
 down to the directions for your particular platform.
 
 
-
-
 \section{Install xake}
 
 Xake is Ximera's version of ``make'' and it converts the
 \LaTeX\ source into HTML.
+
+
 
 \end{document}
