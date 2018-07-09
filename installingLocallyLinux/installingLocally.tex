@@ -40,10 +40,10 @@ mkdir -p ~/go/src/github.com/ximeraproject
 export GOPATH=$HOME/go
 cd ~/go/src/github.com/ximeraproject
 git clone https://github.com/XimeraProject/xake.git
+go get .
 cd ~/go/src/github.com/libgit2/git2go
 git checkout v24
 cd ~/go/src/github.com/ximeraproject/xake
-go get .
 go build .
 Use command ./xake or better yet, add xake to PATH by...
 Also set your PATH so that ~/go/bin/ is in it: (edit .profile)
