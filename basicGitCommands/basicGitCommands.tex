@@ -1,0 +1,34 @@
+\documentclass{ximera}
+
+\title{Basic Git commands}
+
+\begin{document}
+\begin{abstract}
+  Some basic Git commands.
+\end{abstract}
+
+If you already have a git repository made, you can skip this
+step. Otherwise you need to set-up a git repository. This is not
+difficult, but it is dependent on what you name your git
+repository. See
+\link[this]{https://help.github.com/articles/creating-a-new-repository/}
+
+Unless you like \verb|vi| you will want to set your basic editor. I suggest doing:
+
+\begin{verbatim}
+git config --global core.editor "nano"
+\end{verbatim}
+
+When working with git, you will want to
+  \begin{enumerate}
+\item You'll need to \verb!pull! your new repo. Move ``first.tex'' into your repo. 
+\item Type \verb!git add first.tex! to stage the changes you've made
+  to the first.tex file. Or do \verb|git add -u| to add all updated
+  files.
+\item Type \verb!git commit -m "My first edit"! to commit the staged changes. You can also just do: \verb|git commit|
+  \end{enumerate}
+
+
+
+
+\end{document}
