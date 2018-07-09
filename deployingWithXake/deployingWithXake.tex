@@ -1,0 +1,75 @@
+\documentclass{ximera}
+
+\title{Deploying with Xake}
+
+\begin{document}
+\begin{abstract}
+Using Xake to deploy.
+\end{abstract}
+\maketitle
+
+The program \verb|xake| is the Ximera ``make'' program.
+
+\section{Setup}
+
+Here is a list of commands that need to be run for the setup of a course. 
+
+\begin{enumerate}
+\item If you have a GPG key, do:
+\begin{verbatim}
+gpg --list-keys
+\end{verbatim}
+\item If you don’t already have a GPG key, then do
+\begin{verbatim}
+gpg --gen-key
+\end{verbatim}
+answer the questions, but \textbf{leave the passphrase blank} and copy
+the long hex string as YOUR-GPG-KEY-ID ( ABCD3562DBF9929292 or
+whatever) If you are using MacOS, you might not be able to leave the
+passphrase blank. In this case go to \verb|https://gpgtools.org/| and
+install the GPG Suite.  This will provide a GUI that will produce a
+GPG key with spaces. Delete these spaces and this new key (without
+spaces) is your key.
+
+\begin{verbatim}
+gpg --keyserver hkps://ximera.osu.edu/ --send-key YOUR-GPG-KEY-ID
+\end{verbatim}
+Now do
+\begin{verbatim}
+PATH=$PATH:~/go/bin
+\end{verbatim}
+\item Now do: 
+\begin{verbatim}
+xake -k YOUR-GPG-KEY-ID name yourxakename
+\end{verbatim}
+You will need to enter your passkey; prompt may be broken but try typing it and hitting enter anyway
+
+\item You may get vague error messages here if you have not successfully set up your git name and email; you can do this with:
+\begin{verbatim}
+git config --global user.name "YOUR-NAME"
+git config --global user.email "YOUR-EMAIL"
+\end{verbatim}
+\end{enumerate}
+
+
+\section{Work flow}
+
+The commands above are simply for setup. On a regular basis, the work flow is much simpler.
+
+You must work in the top level of your git directory.
+\begin{verbatim}
+git pull
+git add -u
+git commit
+git push
+xake bake
+xake frost
+xake serve
+\end{verbatim}
+
+
+
+
+  
+
+\end{document}
