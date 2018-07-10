@@ -22,7 +22,11 @@ To save the output as a file, use e.g. \verb!xake data json > myData.json!.
 
 \section{Analyzing Data}
 
-Analyzing these data can be difficult because there is so much. If you use R for analysis, the \verb!jsonlite! package will import the xake data export into a data frame. If your data has been saved as \verb!myData.json!, you can use \verb!myData <- fromJSON("myData.json", flatten=TRUE)! to save the data as a dataframe.
+Analyzing these data can be difficult because there is so much. If you use R for analysis, the \verb!jsonlite! package will import the xake data export into a data frame.
+
+Before loading the json file, open it in a text editor. You will see "This is xake, Version 0.9.2" at the beginning with a line break. Delete these so a square bracket is the first line. On the last line, there will be a last comma that needs to be deleted before the final square bracket. Delete this and save the file.
+
+If your data has been saved as \verb!myData.json!, you can use \verb!myData <- fromJSON("myData.json", flatten=TRUE)! to save the data as a dataframe.
 
 \subsection{Variables}
 
