@@ -24,12 +24,14 @@ gpg --list-keys
 gpg --gen-key
 \end{verbatim}
 answer the questions, but \textbf{leave the passphrase blank} and copy
-the long hex string as YOUR-GPG-KEY-ID ( ABCD3562DBF9929292 or
-whatever) If you are using MacOS, you might not be able to leave the
-passphrase blank. In this case go to \verb|https://gpgtools.org/| and
-install the GPG Suite.  This will provide a GUI that will produce a
-GPG key with spaces. Delete these spaces and this new key (without
-spaces) is your key.
+the long hex string as YOUR-GPG-KEY-ID (ABCD3562DBF9929292 or
+whatever).
+
+If you are using MacOS, you might not be able to leave the passphrase
+blank. In this case go to \link{https://gpgtools.org/} and install the
+GPG Suite.  This will provide a GUI that will produce a GPG key with
+spaces. Delete these spaces and this new key (without spaces) is your
+key. You should quite your terminal and open a new one.
 
 \begin{verbatim}
 gpg --keyserver hkps://ximera.osu.edu/ --send-key YOUR-GPG-KEY-ID
