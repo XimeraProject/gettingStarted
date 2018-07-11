@@ -1,0 +1,51 @@
+\documentclass{ximera}
+
+\title{How to Download Data}
+
+\begin{document}
+\begin{abstract}
+  Using xake data.
+\end{abstract}
+\maketitle
+
+\section{Downloading Data}
+
+You can download the data from your students' work using the \verb!xake data! command.
+
+To download the data, run \verb!xake data download!. This will save your data as a log.sz file.
+
+\subsection{Viewing and Exporting Data}
+
+To see your data, you can run either \verb!xake data csv! to access a csv version of the data, or \verb!xake data json! to access a json version. The json version contains much more material.
+
+To save the output as a file, use e.g. \verb!xake data json > myData.json!.
+
+\section{Analyzing Data}
+
+Analyzing these data can be difficult because there is so much. If you use R for analysis, the \verb!jsonlite! package will import the xake data export into a data frame.
+
+Before loading the json file, open it in a text editor. You will see "This is xake, Version 0.9.2" at the beginning with a line break. Delete these so a square bracket is the first line. On the last line, there will be a last comma that needs to be deleted before the final square bracket. Delete this and save the file.
+
+If your data has been saved as \verb!myData.json!, you can use \verb!myData <- fromJSON("myData.json", flatten=TRUE)! to save the data as a dataframe.
+
+\subsection{Variables}
+
+The most relevant variables for analysis are:
+\begin{itemize}
+\item actor: identifies the person until the session has ended. A person may have multiple actor codes depending on whether they have logged it or not, or used different computer, etc.
+\item stored: the time when the entry occurred. Timestamp is based on the user's computer, and maybe or off by hours depending on how their computer is set up. stored is a better choice for the time
+\item verb.display.en-US: the verb for what was happening at that record
+\begin{itemize}
+\item experienced: a page loaded
+\item answered: a question was answered
+\item completed: something was completed (not sure what qualifies here)
+\item played: a video was played
+\item watched: a video was watched from some time to another time
+\item skipped: a video was skipped from one time to another time (after being paused)
+\end{itemize}
+\item object.definition.name.en-US: the name of the page loaded
+\item result.response: whatever was entered into an answer box
+\item result.success: if the question is graded, this is \verb!TRUE! if that answer was correct and \verb!FALSE! if the answer was incorrect.
+\end{itemize}
+
+\end{document}

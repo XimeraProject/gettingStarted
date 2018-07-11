@@ -43,11 +43,18 @@ sudo apt install ./xake_0.9.2_amd64.deb.deb
 where the \verb|0.9.2| will be replaced with the version of the
 \verb|.deb| file you have downloaded.
 
+If you want to rely on Ximera's ability to convert TikZ directly to SVGs, then you will need to install a couple other tools,
+\begin{verbatim}
+sudo apt-get install mupdf-tools
+sudo apt-get install pdf2svg
+\end{verbatim}
+
 \subsection{Installing xake on Red Hat}
 
 Download the \verb|.rpm| file from here:
 
 \link{https://github.com/XimeraProject/xake/releases}
 
-And install as usual. 
+And install as usual.  You will also want to install \verb|mutool| and \verb|pdf2svg|.
+
 \end{document}
