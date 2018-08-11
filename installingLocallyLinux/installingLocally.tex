@@ -11,10 +11,22 @@ Instructions for installing Ximera locally.
 
 \section{Install ximeraLaTeX}
 
-This can be done by going to \link[XimeraProject/ximeraLatex GitHub
-  page]{https://github.com/XimeraProject/ximeraLatex}, and scrolling
-down to the directions for your particular platform.
+\section{For Linux}
 
+Use git to clone the repo with:
+
+\begin{verbatim}
+git clone https://github.com/XimeraProject/ximeraLatex.git
+\end{verbatim}
+
+Create the directory structure:
+
+\begin{verbatim}
+~/texmf/tex/latex/
+\end{verbatim}
+
+and move \verb|ximeraLatex| to \verb|~/texmf/tex/latex/|. This will allow all of
+your documents to find \verb|ximera.cls|
 
 
 

@@ -7,6 +7,56 @@ Instructions for installing Ximera locally.
 \end{abstract}
 \maketitle
 
+For Windows, we will install the Ximera document class, and Ubuntu for Windows.
+
+Then the work-flow is that one creates documents on the Windows side,
+uses GitHub to push them to a remote repository, and then pulls to
+Ubuntu for Windows. Finally \verb|xake| is used to deploy the
+documnets to the web on the Ubuntu Side.
+
+
+\section{Install ximeraLaTeX}
+
+
+Visit the repo on Github.com \link[XimeraProject/ximeraLatex GitHub
+  page]{https://github.com/XimeraProject/ximeraLatex} and click the
+``Clone in Desktop'' button.
+
+
+
+Create the directory structure:
+
+\begin{verbatim}
+C:\localtexmf\tex\latex\
+\end{verbatim}
+
+and move ximeraLatex to \verb|C:\localtexmf\tex\latex\|. For MiKteX to notice this
+directory, go to:
+
+\begin{itemize}
+\item Start $\to$ All programs $\to$ MiKTeX Folder $\to$ Maintenance (Admin) Folder $\to$ Settings (Admin).
+\item Now select the tab ``Roots.''
+\item Click ``Add'' because you are going to add a path.
+\item Find \verb|C:\localtexmf\| and click "OK."
+\item Click ``apply'' then ``OK.''
+\item Reopen Miktex Settings (Admin). Click Refresh FNDB.
+\end{itemize}
+This will allow all of your documents to find \verb|ximera.cls|. Note, it is
+important that none of the directories containing ximeraLatex have
+spaces in their names. Once you move ximerLatex, you will need to tell
+your GitHub client where to look for it, you can do this using ``find
+files.''
+
+
+
+
+
+\section{Installing Ubuntu for windows}
+
+
+
+
+
 First you will want to install ``Ubuntu'' for Windows. You download
 this from the Microsoft Store. While this process can be somewhat
 complex, however, following the prompts will get you there.

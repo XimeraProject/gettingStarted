@@ -8,13 +8,53 @@
 \end{abstract}
 \maketitle
 
-If you already have a git repository made, you can skip this
-step. Otherwise you need to set-up a git repository. This is not
-difficult, but it is dependent on what you name your git
-repository. See
-\link[this]{https://help.github.com/articles/creating-a-new-repository/}
+\section{Creating a Git repository}
 
-Unless you like \verb|vi| you will want to set your basic editor. I suggest doing:
+If you already have a git repository made, you can skip this
+step. Otherwise you need to set-up a git repository.
+
+
+
+\subsection{Creating the repository in the command line}
+
+Go to GitHub, click ``+'' and Create New Repository Give it a title,
+and a short description.
+
+Ignore the ``initialize this repo with a README''
+
+Click ``Create repository''
+
+Now we will push your current directory to this repo. Once you are within your repo:
+
+\begin{verbatim}
+git init
+git add .
+git commit -m 'first push'
+git remote add origin git@github.com:YOUR-GIT-USER/REPO-NAME.git
+git push -u origin master
+\end{verbatim}
+
+where YOUR-GIT-USER is your GitHub username and REPO-NAME is the name
+of the repository you created.
+
+
+\subsection{Creating the repository via a client}
+
+Drag and drop you new folder on to the (probably empty) repository
+window. Then push to GitHub with the button in the upper right hand
+corner. You want to always allow GitHub to use your SSH KeyChain.
+
+You can confirm a repository was made by going to GitHub and viewing
+your user profile. To add new files to the repository, go to the
+``Repository'' heading in the Git client and click ``open in finder.''
+From there one can add files by dragging and dropping, and then
+syncing.
+
+
+\section{Pushing Files}
+
+Unless you like \verb|vi| you will want to set your basic editor. I
+suggest doing:
 
 \begin{verbatim}
 git config --global core.editor "nano"
@@ -22,7 +62,8 @@ git config --global core.editor "nano"
 
 When working with git, you will want to
   \begin{enumerate}
-\item You'll need to \verb!pull! your new repo. Move ``first.tex'' into your repo. 
+\item You'll need to \verb!pull! your new repo. Create a file. Suppose its name is:
+  \verb|first.tex|
 \item Type \verb!git add first.tex! to stage the changes you've made
   to the first.tex file. Or do \verb|git add -u| to add all updated
   files.
