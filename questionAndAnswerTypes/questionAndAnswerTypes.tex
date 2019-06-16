@@ -173,4 +173,34 @@ Clicking on \verb!View model solution! shows the user
 whatever you typed in the  \verb!freeResponse! environment.
 \end{remark}
 
+\section{Ungraded Questions}
+
+Questions can be wrapped in an ungraded environment so students can submit an answer (which can be viewed by an instructor) without giving the student feedback on whether their answer is correct. The pdf will still show the correct answer to the question.
+
+\begin{verbatim}
+\begin{ungraded}
+\begin{question}
+  Which of the following functions has a graph which is a parabola?
+  \begin{multipleChoice}
+    \choice[correct]{$y=x^2+3x-3$}
+    \choice{$y = \frac{1}{x+2}$}
+    \choice{$y=3x+1$}
+  \end{multipleChoice}
+\end{question}
+\end{ungraded}
+\end{verbatim}
+
+Produces:
+
+\begin{ungraded}
+\begin{question}
+  Which of the following functions has a graph which is a parabola?
+  \begin{multipleChoice}
+    \choice[correct]{$y=x^2+3x-3$}
+    \choice{$y = \frac{1}{x+2}$}
+    \choice{$y=3x+1$}
+  \end{multipleChoice}
+\end{question}
+\end{ungraded}
+
 \end{document}
